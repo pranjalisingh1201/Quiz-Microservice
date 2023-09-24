@@ -1,0 +1,90 @@
+{
+	"info": {
+		"_postman_id": "5ae0f207-8491-49f9-8403-d6dea48ac91e",
+		"name": "Quiz-Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13738050"
+	},
+	"item": [
+		{
+			"name": "Create Quiz",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"category\":\"JAVA\",\r\n    \"noOfQuestions\":2,\r\n    \"title\":\"JSpring\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/quiz/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"quiz",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Submit Quiz ",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"id\": \"6\",\r\n        \"response\":\"8\" \r\n    },\r\n    {\r\n        \"id\": \"5\",\r\n        \"response\":\"4\" \r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/quiz/submit/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"quiz",
+						"submit",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Quiz",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/quiz/get/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"quiz",
+						"get",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
